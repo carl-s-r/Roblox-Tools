@@ -14,8 +14,8 @@ while (wait(10)) do
 			}
 		local Event = game:GetService("ReplicatedStorage")["events-@easy-games/lobby:shared/event/lobby-events@getEvents.Events"].joinQueue
 		Event:FireServer(A_1)
-		print("Match Ended")
+		local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequestEvent:FireServer("Match Ended", "All")
         else
-		print("Match Ongoing")
+		local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequestEvent:FireServer("Match Ongoing", "All")
 	end
 end
