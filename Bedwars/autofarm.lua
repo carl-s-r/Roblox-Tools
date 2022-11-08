@@ -2,7 +2,7 @@ repeat
 	wait()
 until game:IsLoaded()
 
-syn.queue_on_teleport("loadstring(game:HttpGet(''))()")
+syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/carl-s-r/Roblox-Tools/main/Bedwars/autofarm.lua'))()")
 
 while (wait(10)) do
 	local redTeam = game:GetService("Teams")["Red"]:GetPlayers()
