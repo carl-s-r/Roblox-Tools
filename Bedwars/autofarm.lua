@@ -4,7 +4,7 @@ until game:IsLoaded()
 
 syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/carl-s-r/Roblox-Tools/main/Bedwars/autofarm.lua'))()")
 
-while (wait(10)) do
+while wait(10) do
 	local redTeam = game:GetService("Teams")["Red"]:GetPlayers()
 	local blueTeam = game:GetService("Teams")["Blue"]:GetPlayers()
 	if #redTeam == 0 or #blueTeam == 0 or game.Players.LocalPlayer.Team.Name == "Spectators" then
