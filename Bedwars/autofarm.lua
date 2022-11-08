@@ -7,7 +7,7 @@ syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.co
 while (wait(10)) do
 	local redTeam = game:GetService("Teams")["Red"]:GetPlayers()
 	local blueTeam = game:GetService("Teams")["Blue"]:GetPlayers()
-	if #redTeam == 0 or #blueTeam == 0 then
+	if #redTeam == 0 or #blueTeam == 0 or game.Players.LocalPlayer.Team.Name == "Spectators" then
 		local A_1 = 
 			{
 				["queueType"] = "bedwars_20v20"
