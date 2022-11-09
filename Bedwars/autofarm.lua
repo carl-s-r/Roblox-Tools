@@ -2,7 +2,28 @@ repeat
 	wait()
 until game:IsLoaded()
 
-syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/carl-s-r/Roblox-Tools/main/Bedwars/autofarm.lua'))()")
+--Anti AFK
+local Players = game:GetService("Players")
+local connections = getconnections or get_signal_cons
+if connections then
+	for i,v in pairs(connections(Players.LocalPlayer.Idled)) do
+		if v["Disable"] then
+			v["Disable"](v)
+		elseif v["Disconnect"] then
+			v["Disconnect"](v)
+		end
+	end
+else
+    Players.LocalPlayer.Idled:Connect(function()
+        local VirtualUser = game:GetService("VirtualUser")
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new())
+    end)
+end
+
+local httpservice = game:GetService('HttpService')
+local queueonteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
+queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/carl-s-r/Roblox-Tools/main/Bedwars/autofarm.lua'))()")
 
 while wait(10) do
 	local redTeam = game:GetService("Teams")["Red"]:GetPlayers()
