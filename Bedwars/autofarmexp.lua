@@ -19,6 +19,9 @@ if game.PlaceId == 6872265039 then
 	warn("Auto Queue Loaded Successfully")
 end
 if game.PlaceId == 8444591321 then
+	wait(20)
+	setfpscap(fpslimit)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/carl-s-r/Roblox-Tools/main/Bedwars/potatographics.lua"))()
 	local vu = game:GetService("VirtualUser")
 	game:GetService("Players").LocalPlayer.Idled:connect(function()
 	   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
@@ -38,8 +41,4 @@ if game.PlaceId == 8444591321 then
 			warn("ongoing match")
 		end
 	end
-	warn("Auto Queue Loaded Successfully")
-	wait(20)
-	setfpscap(fpslimit)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/carl-s-r/Roblox-Tools/main/Bedwars/potatographics.lua"))()
 end
