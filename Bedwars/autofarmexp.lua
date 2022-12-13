@@ -14,8 +14,9 @@ if game.PlaceId == 6872265039 then
 	{
 		["queueType"] = "bedwars_20v20"
 	}
-local Event = game:GetService("ReplicatedStorage")["events-@easy-games/lobby:shared/event/lobby-events@getEvents.Events"].joinQueue
-Event:FireServer(A_1)
+        local Event = game:GetService("ReplicatedStorage")["events-@easy-games/lobby:shared/event/lobby-events@getEvents.Events"].joinQueue
+        Event:FireServer(A_1)
+	warn("Auto Queue Loaded Successfully")
 end
 if game.PlaceId == 8444591321 then
 	local vu = game:GetService("VirtualUser")
@@ -39,6 +40,5 @@ if game.PlaceId == 8444591321 then
 	end
 	setfpscap(fpslimit)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/carl-s-r/Roblox-Tools/main/Bedwars/potatographics.lua"))()
+	warn("Auto Queue Loaded Successfully")
 end
-
-warn("Auto Queue Loaded Successfully")
