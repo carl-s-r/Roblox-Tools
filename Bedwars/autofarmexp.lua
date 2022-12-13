@@ -38,7 +38,8 @@ if game.PlaceId == 8444591321 then
 			warn("ongoing match")
 		end
 	end
+	warn("Auto Queue Loaded Successfully")
+	wait(20)
 	setfpscap(fpslimit)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/carl-s-r/Roblox-Tools/main/Bedwars/potatographics.lua"))()
-	warn("Auto Queue Loaded Successfully")
 end
