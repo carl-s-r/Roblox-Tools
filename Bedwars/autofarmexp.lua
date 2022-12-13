@@ -25,7 +25,7 @@ if game.PlaceId == 8444591321 then
 	   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 	end)
 	while wait(5) do
-		if game.Players.LocalPlayer.Team == "Spectators" or #game.Teams.Blue:GetPlayers() == 0 or #game.Teams.Red:GetPlayers() == 0 then
+		if tostring(game.Players.LocalPlayer.Team) == "Spectators" or #game.Teams.Blue:GetPlayers() == 0 or #game.Teams.Red:GetPlayers() == 0 then
 			warn("match ended")
 			local A_1 = 
 			{
